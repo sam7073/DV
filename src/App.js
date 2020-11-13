@@ -7,6 +7,7 @@ import { Age } from "./routes/age";
 import { Road } from "./routes/road";
 import { Time } from "./routes/time";
 import { Day } from "./routes/day";
+import { Location } from "./routes/location";
 import { Danger } from "./routes/danger";
 
 import { Card } from "./components/Card";
@@ -23,7 +24,7 @@ const Wrapper = styled.div`
 function App() {
   return (
     <Wrapper>
-      <BrowserRouter>
+      <BrowserRouter basename="/DV">
         <Card width="200px" height="800px" fd="column">
           <Link to="/car">
             <Button>car</Button>
@@ -39,6 +40,9 @@ function App() {
           </Link>
           <Link to="/time">
             <Button>time</Button>
+          </Link>
+          <Link to="/location">
+            <Button>location</Button>
           </Link>
           <Link to="/danger">
             <Button primary>risk</Button>
@@ -56,6 +60,9 @@ function App() {
           </Route>
           <Route path="/day">
             <Day></Day>
+          </Route>
+          <Route path="/location">
+            <Location></Location>
           </Route>
           <Route path="/time">
             <Time></Time>
