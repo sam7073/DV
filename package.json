@@ -1,6 +1,6 @@
 {
   "name": "dv",
-  "homepage": "http://sam7073.github.io/DV",
+  "homepage": "http://sam7073.github.io/DV/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,7 +10,9 @@
     "gh-pages": "^3.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
+    "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -18,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
