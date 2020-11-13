@@ -19,7 +19,7 @@ const StyledButton = styled.button`
 
   font-family: Maplestory;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 25px;
 
   color: ${(props) =>
     (props.primary && "white") || (props.secondary && "black") || props.color};
@@ -30,5 +30,5 @@ const StyledButton = styled.button`
 `;
 
 export function Button(props) {
-  return <StyledButton {...props}></StyledButton>;
+  return <StyledButton {...props}>{props.children}</StyledButton>;
 }

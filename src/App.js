@@ -1,11 +1,15 @@
 import "./App.css";
 import { BrowserRouter, Link, Route } from "react-router-dom";
+import styled from "styled-components";
+
 import { Car } from "./routes/car";
 import { Age } from "./routes/age";
 import { Road } from "./routes/road";
 import { Time } from "./routes/time";
-import Card from "./components/Card";
-import styled from "styled-components";
+import { Day } from "./routes/day";
+import { Danger } from "./routes/danger";
+
+import { Card } from "./components/Card";
 import { Button } from "./components/Buttons";
 
 const Wrapper = styled.div`
@@ -30,8 +34,14 @@ function App() {
           <Link to="/road">
             <Button>road</Button>
           </Link>
+          <Link to="/day">
+            <Button>day</Button>
+          </Link>
           <Link to="/time">
             <Button>time</Button>
+          </Link>
+          <Link to="/danger">
+            <Button primary>risk</Button>
           </Link>
         </Card>
         <Card width="900px" height="800px" margin_left="100px">
@@ -44,8 +54,14 @@ function App() {
           <Route path="/road">
             <Road></Road>
           </Route>
+          <Route path="/day">
+            <Day></Day>
+          </Route>
           <Route path="/time">
             <Time></Time>
+          </Route>
+          <Route path="/danger">
+            <Danger></Danger>
           </Route>
         </Card>
       </BrowserRouter>
